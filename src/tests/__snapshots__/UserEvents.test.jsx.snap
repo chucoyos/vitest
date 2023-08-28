@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`UserEvents component > Renders Modified text 1`] = `
+<div>
+  <div>
+    <h1>
+      Initial Text
+    </h1>
+    <button>
+      Set Text
+    </button>
+  </div>
+</div>
+`;
