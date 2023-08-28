@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App component > Shows examples with snapshot 1`] = `
+<div>
+  <h1>
+    Hello Vitest
+  </h1>
+</div>
+`;
+
+exports[`App component > Shows examples with snapshot 2`] = `"Hello Vitest"`;
