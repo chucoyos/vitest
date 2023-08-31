@@ -6,8 +6,14 @@ function UserEvents() {
 	}
 	return (
 		<div>
-			<h1>{text}</h1>
-			<button onClick={handleText}>Set Text</button>
+			<h1 className='heading cool'>{text}</h1>
+			<p role='paragraph'>{text}</p>
+			<button
+				type='button'
+				onClick={handleText}
+			>
+				Set Text
+			</button>
 		</div>
 	)
 }

@@ -3,10 +3,19 @@
 exports[`UserEvents component > Renders Modified text 1`] = `
 <div>
   <div>
-    <h1>
+    <h1
+      class="heading cool"
+    >
       Initial Text
     </h1>
-    <button>
+    <p
+      role="paragraph"
+    >
+      Initial Text
+    </p>
+    <button
+      type="button"
+    >
       Set Text
     </button>
   </div>
