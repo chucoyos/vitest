@@ -16,5 +16,6 @@ describe('CustomButton component', () => {
 		render(<CustomButton onClick={onClick} />)
 		const button = screen.getByRole('button', { name: 'Click Me' })
 		await user.click(button)
+		expect(onClick).toHaveBeenCalled()
 	})
 })
