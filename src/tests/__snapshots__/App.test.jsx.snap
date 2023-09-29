@@ -6,6 +6,14 @@ exports[`App component > Shows examples with snapshot 1`] = `
     <h1>
       Hello Vitest
     </h1>
+    <p>
+      Before
+    </p>
+    <input
+      placeholder="name"
+      type="text"
+      value="Before"
+    />
   </div>
 </div>
 `;
