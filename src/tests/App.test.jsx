@@ -2,11 +2,11 @@ import App from '../App'
 import { describe, it, expect } from 'vitest'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import '@testing-library/jest-dom'
+import userEvent from '@testing-library/user-event'
 
 describe('App component', () => {
 	it('Renders App component', () => {
 		render(<App />)
-		screen.debug()
 		// This is an explicit assertion
 		expect(screen.getByRole('heading').textContent).toBe('Hello Vitest')
 		// This is an implicit assertion
@@ -43,11 +43,20 @@ describe('App component', () => {
 		expect(screen.getByRole('textbox')).toBeInTheDocument()
 		expect(screen.getByPlaceholderText('name')).toBeInTheDocument()
 	})
-	it('Changes input value', () => {
+	it('Changes input value with fireEvent', () => {
 		render(<App />)
 		const input = screen.getByRole('textbox')
 		expect(input.value).toBe('Before')
 		fireEvent.change(input, { target: { value: 'Javascript' } })
+		expect(input.value).toBe('Javascript')
+		waitFor(() => expect(screen.getByText('Javascript')).toBeInTheDocument())
+	})
+	it('Changes input value with userEvent', async () => {
+		render(<App />)
+		const input = screen.getByRole('textbox')
+		expect(input.value).toBe('Before')
+		fireEvent.change(input, { target: { value: '' } })
+		await userEvent.type(input, 'Javascript')
 		expect(input.value).toBe('Javascript')
 		waitFor(() => expect(screen.getByText('Javascript')).toBeInTheDocument())
 		screen.debug()
