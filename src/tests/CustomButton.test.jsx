@@ -17,6 +17,7 @@ describe('CustomButton component', () => {
 		const button = screen.getByRole('button', { name: 'Click Me' })
 		await user.click(button)
 		expect(onClick).toHaveBeenCalled()
+		expect(onClick).toHaveBeenCalledTimes(1)
 	})
 
 	it("should not call the onClick function when it isn't clicked", async () => {
