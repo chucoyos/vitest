@@ -7,17 +7,22 @@
 [Cypress documentation](https://docs.cypress.io/guides/component-testing/getting-started)
 [Cypress testing site](https://example.cypress.io/)
 
-````bash
-
 ```bash
 npm install vitest --save-dev
 npm install jsdom --save-dev
 npm install @testing-library/react @testing-library/jest-dom --save-dev
 npm install @testing-library/user-event --save-dev
 npm install --save-dev cypress
-npm run test:cypress
+```
+
+## Run tests
+
+```bash
+npm test
 npx cypress open
-````
+npm run test:cypress
+cypress open
+```
 
 ## Tutorial
 
